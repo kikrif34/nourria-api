@@ -1,0 +1,14 @@
+{
+  "name": "nourria-api",
+  "version": "0.1.0",
+  "description": "NourrIA — API backend",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage"
+  }
+}
