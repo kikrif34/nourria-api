@@ -17,8 +17,8 @@ const PORT = parseInt(process.env.PORT ?? '3001', 10);
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001', 'http://192.168.1.78:3000'],
-  credentials: true,
+  origin: '*',
+  credentials: false,
 }));
 app.use(express.json({ limit: '10mb' }));
 
