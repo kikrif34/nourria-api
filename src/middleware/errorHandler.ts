@@ -51,3 +51,12 @@ export function errorHandler(
     },
   });
 }
+
+export class NotFoundError extends Error {
+  public readonly code = 'NOT_FOUND';
+  public readonly statusCode = 404;
+  constructor(resource: string) {
+    super(`${resource} introuvable`);
+    this.name = 'NotFoundError';
+  }
+}
