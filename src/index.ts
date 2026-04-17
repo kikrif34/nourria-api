@@ -12,6 +12,7 @@ import { opsRouter } from './routes/ops';
 import { adminRouter } from './routes/admin';
 import { carteRouter } from './routes/carte';
 import { importRouter } from './routes/import';
+import { connecteursRouter } from './routes/connecteurs';
 
 const app = express();
 const PORT = parseInt(process.env.PORT ?? '3001', 10);
@@ -32,6 +33,7 @@ app.use('/api/v1/ops', opsRouter);
 app.use('/api/v1/admin', adminRouter);
 app.use('/api/v1/carte', carteRouter);
 app.use('/api/v1/import', importRouter);
+app.use('/api/v1/connecteurs', connecteursRouter);
 
 app.use(errorHandler);
 
